@@ -8,7 +8,7 @@ export default function Card({hog}){
   const [showData, setShowData] = useState(false)
   // Function that will handle the action when the button is clicked(showing the rest of the data).
   function clickData(){
-    setShowData((initShowData) => !initShowData) 
+    setShowData((showData) => !showData) 
    }
 
    if(!whenClicked){return (
