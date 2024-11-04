@@ -3,7 +3,7 @@ export default function Data({hog}){
     const{specialty, greased, weight,medal} = hog
 
     return(
-        <div className="description">
+        <div className="ui segment">
             <p>Specialty:{specialty}</p>
             <p>Weight:{weight}</p>
             <p>{greased ? "Greased" : ""}</p>

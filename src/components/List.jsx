@@ -3,9 +3,11 @@ import Card from "./Card"
 export default function List({hogs}){
 
     return(
-        <div className="ui three stackable cards">
+        <div className="ui grid container">
             {hogs.map((hog)=>(
+                <div className="ui eight wide column">
                 <Card key={hog.name} hog={hog}/>
+                </div>
             ))}
         </div>
     )
