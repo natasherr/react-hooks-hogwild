@@ -1,4 +1,4 @@
-
+// The additional data when the "Show Details " button is pressed
 export default function Data({hog}){
     const{specialty, greased, weight,medal} = hog
 

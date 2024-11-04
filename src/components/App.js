@@ -10,7 +10,7 @@ function App() {
 	// Sort functionality hook
 	const[sort, setSort]= useState("name")
     const [greased, setGreased] = useState(false)
-
+// Sorting and filtering hogs based on state
 	const sortAndFilter=hogs
 	 .filter((hog) => {
 		// Showing greased hogs if greased is true
@@ -21,6 +21,7 @@ function App() {
 		 	// If x is lighter,it comes first but if it is heavier,it comes after.
 		 	return x.weight-y.weight
 		 }
+		//  Handling sorting by name
 		 else if (sort === "name"){
 		 	return x.name.localeCompare(y.name)
 		 }

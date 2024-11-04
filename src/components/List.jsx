@@ -1,5 +1,5 @@
 import Card from "./Card"
-
+// The list component for displaying the hog cards
 export default function List({hogs}){
 
     return(

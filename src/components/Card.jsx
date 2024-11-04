@@ -2,10 +2,11 @@ import Data from "./Data"
 import { useState } from "react"
 
 export default function Card({hog}){
-
+// Tracking if card is clicked
   const [whenClicked, setWhenClicked] = useState(false)
+//   Tracking if data is shown
   const [showData, setShowData] = useState(false)
-  // Function that will handle the action when a tile is clicked(showing the rest of the data).
+  // Function that will handle the action when the button is clicked(showing the rest of the data).
   function clickData(){
     setShowData((initShowData) => !initShowData) 
    }

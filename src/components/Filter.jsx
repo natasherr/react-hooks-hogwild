@@ -1,6 +1,7 @@
 export default function Filter({greased, sort, changeGreased, changeSort}){
-
+//  Handling the greased checkbox
   function greasedOrNot(event){changeGreased(event.target.checked)}
+  // Handling the sorting dropdown
   function sorting(event){changeSort(event.target.value)}
 
     return(
