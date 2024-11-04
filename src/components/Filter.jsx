@@ -4,7 +4,7 @@ export default function Filter({greased, sort, changeGreased, changeSort}){
   function sorting(event){changeSort(event.target.value)}
 
     return(
-      <div className="Filter">
+      <div className="FilterWrapper">
         <div className="ui menu">
           <div className="ui item">
             <label>Sort By:</label>

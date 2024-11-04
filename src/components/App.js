@@ -11,27 +11,21 @@ function App() {
 	const[sort, setSort]= useState("name")
     const [greased, setGreased] = useState(false)
 
-	const sortAndFilter=
-	  hogs.sort((x,y)=>{
-		 if(sort === "weight"){
+	const sortAndFilter=hogs
+	 .filter((hog) => {
+		// Showing greased hogs if greased is true
+		return greased ? hog.greased : true;
+	 })
+	 .sort((x,y) => {
+		if(sort === "weight"){
 		 	// If x is lighter,it comes first but if it is heavier,it comes after.
 		 	return x.weight-y.weight
 		 }
 		 else if (sort === "name"){
-		 	return x.name - y.name
+		 	return x.name.localeCompare(y.name)
 		 }
-	    })
-
-	
-	  hogs.filter((hog)=>{
-			// Showing greased hogs
-			if(greased===true){
-				return !hog.greased
-			}
-			// Showing all the hogs
-			else {return hog.greased}
-			
-		})
+		return 0
+	 })
 		
 
 	return (

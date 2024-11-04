@@ -10,22 +10,32 @@ export default function Card({hog}){
     setShowData((initShowData) => !initShowData) 
    }
 
-   if(whenClicked===false){return null}
+   if(!whenClicked){return (
+      <div className="ui card eight wide column pigTile">
+                <h3>{hog.name}</h3>
+                <img src={hog.image} alt={hog.name} /> 
+                <button className="ui button" onClick={() => setWhenClicked(true)}>
+                    Show Details
+                </button>
+            </div>
+   )
+
+   }
    const{name, image} = hog
    return(
-    <div className="ui eight wide column pigTile">
+    <div className="ui card eight wide column pigTile">
         <div className="image">
         {/*Displaying the name and image by default*/}
           <h3>{name}</h3>
-          <img src={image} alt={name}>{image}</img>
+          <img src={image} alt={name}/>
         </div>
-        <div>
+        <div className="extra content">
         {/* displaying the rest of the data */}
          {showData ? <Data hog={hog}/> : null}
          <button className="ui button" onClick={clickData}>
             {showData ? "Less" : "More"}
          </button>
-         <button className="ui button" onClick={()=> setWhenClicked(true)}>
+         <button className="ui button" onClick={()=> setWhenClicked(false)}>
             Hide
          </button>
         </div>
